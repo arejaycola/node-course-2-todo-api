@@ -93,13 +93,11 @@ app.patch('/todos/:id', (req, res) => {
 			return res.status(400).send();
 		}
 
-		res.status(400).send(todo);
+		res.status(200).send({todo: todo});
 
 	}).catch((e) => {
 		res.status(400).send();
 	})
-
-
 });
 
 
